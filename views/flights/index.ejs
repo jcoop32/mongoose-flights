@@ -1,13 +1,26 @@
 <%- include('../partials/header.ejs') %>
 
 <h1>Flights:</h1>
-<ul>
-    <% for(let i = 0; i < flight.length; i++){%> 
-    
-        <li><%=flight[i].flightNo%></li>
-    
-    <% } %>
-
-</ul>
+<table>
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>Flight No.</th>
+        <th>Departs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < flight.length; i++){%> 
+         <tr>
+           <td><%= flight[i].airline %></td>
+           <td><%= flight[i].airport%></td>
+           <td><%= flight[i].flightNo %></td>
+           <td><%= flight[i].departs %></td>
+         </tr>
+         <%} %>
+      <!-- Close the forEach using EJS here -->
+    </tbody>
+  </table>
 
 <%- include('../partials/footer.ejs') %>

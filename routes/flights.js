@@ -3,9 +3,13 @@ var router = express.Router();
 
 const flightsCtrl = require('../controllers/flights')
 
-/* GET users listing. */
+/* GET flight listing. */
+//create new flight path: /flights/new
+router.get('/new', flightsCtrl.new);
+//POST new Flight path: /flights
+router.post('/', flightsCtrl.create)
+//GET path: /flights
 router.get('/', flightsCtrl.index)
 
-// router.get('/new', flightsCtrl.new);
 
 module.exports = router;
