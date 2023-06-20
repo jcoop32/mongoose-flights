@@ -1,4 +1,13 @@
 <%- include('../partials/header.ejs') %>
 
+<h1>Flights:</h1>
+<ul>
+    <% for(let i = 0; i < flight.length; i++){%> 
+    
+        <li><%=flight[i].flightNo%></li>
+    
+    <% } %>
+
+</ul>
 
 <%- include('../partials/footer.ejs') %>
