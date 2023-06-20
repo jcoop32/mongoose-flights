@@ -7,8 +7,8 @@ const flightSchema = new Schema(
     airline: { type: String, enum: ['AA', 'SW', 'UA', 'DL'] },
     airport: {
       type: String,
-      default: 'ORD',
       enum: ['ORD', 'LAX', 'JFK', 'DEN'],
+      default: 'ORD',
     },
     flightNo: { type: Number, min: 10, max: 9999 },
     departs: {

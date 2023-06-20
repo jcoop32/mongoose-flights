@@ -30,7 +30,7 @@ async function create(req, res) {
     res.redirect('/flights');
   } catch (err) {
     console.log(err);
-    res.render('flights/index', { errorMsg: err.errorMsg });
+    res.render('flights', { errorMsg: err.errorMsg });
   }
 }
 
