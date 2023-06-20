@@ -12,13 +12,19 @@
   </thead>
   <tbody>
     <% for(let i = 0; i < flight.length; i++){%>
-    <tr>
-      <td><%= flight[i].airline %></td>
-      <td><%= flight[i].airport%></td>
-      <td><%= flight[i].flightNo %></td>
-      <td><%= flight[i].departs %></td>
-    </tr>
-    <%} %>
+      <tr>
+        <td><%= flight[i].airline %></td>
+        <td><%= flight[i].airport%></td>
+        <td><%= flight[i].flightNo %></td>
+        <%let date = new Date()%> 
+        <%if(flight[i].departs.getTime() < date.getTime()){%>
+        <td style="color: red;"><%= flight[i].departs %></td>
+        <%} else{ %>
+          <td style="color: black;"><%= flight[i].departs %></td>
+        <%}%>
+        <!-- <td><%= flight[i].departs %> }</td> -->
+      </tr>
+    <%}%>
     <!-- Close the forEach using EJS here -->
   </tbody>
 </table>

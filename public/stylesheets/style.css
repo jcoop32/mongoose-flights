@@ -1,13 +1,24 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-tr, td, thead, th{
+tr,
+td,
+thead,
+th {
   border: 1px solid black;
   padding: 3px;
+}
+
+label {
+  margin: 10px auto 10px auto;
+}
+
+late {
+  color: red;
 }
